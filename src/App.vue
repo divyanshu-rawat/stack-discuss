@@ -1,19 +1,36 @@
+
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <User :user="user" />
+    <div>App's user: {{user}}</div>
+
+    <Test :data = "data" />
+
+     <div v-for = "x in data">
+          App's Data : {{x.name}} - {{x.email}}
+     </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import User from "./components/User";
+import data from './data_set/data.json';
+import Test from './components/Test';
 
 export default {
-  name: 'app',
+  name: "App",
   components: {
-    HelloWorld
+    User, Test
+  },
+  data() {
+    return {
+      user: {
+        name: "John Doe"
+      },
+      data: data
+    };
   }
-}
+};
 </script>
 
 <style>
