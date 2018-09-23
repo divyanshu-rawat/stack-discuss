@@ -21,3 +21,7 @@ Lints and fixes files
 ```
 npm run lint
 ```
+
+Conflict Resolved :
+
+[StackOverflow](https://stackoverflow.com/questions/52459374/creating-local-copy-of-passed-props-in-child-component-in-vue-js/52467000#52467000)
